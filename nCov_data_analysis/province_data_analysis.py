@@ -18,45 +18,46 @@ class ProvinceData():
         self.ncovdata = a_get_html.nCovData()
         self.all_data = self.ncovdata.get_html_text()
 
-    def world_total_data(self):
+    def province_total_data(self):
         '''获取世界各国累积数据'''
-        areaTree = self.all_data['areaTree']
-        country_name = list()
-        country_total_confirm = list()
-        country_total_suspect = list()
-        country_total_dead = list()
-        country_total_heal = list()
-        for country in areaTree:
-            country_name.append(country['name'])
-            country_total_confirm.append(country['total']['confirm'])
-            country_total_suspect.append(country['total']['suspect'])
-            country_total_dead.append(country['total']['dead'])
-            country_total_heal.append(country['total']['heal'])
-        print(country_name)
-        print(country_total_confirm)
+        # areaTree对应的第一个数据就是中国，下面的children对应的就是每个省份的数据，是一个列表
+        areaTree = self.all_data['areaTree'][0]['children']
+        province_name = list()
+        province_total_confirm = list()
+        province_total_suspect = list()
+        province_total_dead = list()
+        province_total_heal = list()
+        for province in areaTree:
+            province_name.append(province['name'])
+            province_total_confirm.append(province['total']['confirm'])
+            province_total_suspect.append(province['total']['suspect'])
+            province_total_dead.append(province['total']['dead'])
+            province_total_heal.append(province['total']['heal'])
+        print(province_name)
+        print(province_total_confirm)
 
-    def world_today_data(self):
+    def province_today_data(self):
         '''获取各国今日数据'''
-        areaTree = self.all_data['areaTree']
-        country_name = list()
-        country_today_confirm = list()
-        country_today_suspect = list()
-        country_today_dead = list()
-        country_today_heal = list()
-        for country in areaTree:
-            country_name.append(country['name'])
-            country_today_confirm.append(country['today']['confirm'])
-            country_today_suspect.append(country['today']['suspect'])
-            country_today_dead.append(country['total']['dead'])
-            country_today_heal.append(country['total']['heal'])
-        print(country_today_confirm)
+        areaTree = self.all_data['areaTree'][0]['children']
+        province_name = list()
+        province_today_confirm = list()
+        province_today_suspect = list()
+        province_today_dead = list()
+        province_today_heal = list()
+        for province in areaTree:
+            province_name.append(province['name'])
+            province_today_confirm.append(province['today']['confirm'])
+            province_today_suspect.append(province['today']['suspect'])
+            province_today_dead.append(province['total']['dead'])
+            province_today_heal.append(province['total']['heal'])
+        print(province_today_confirm)
 
     def main(self):
-        self.world_total_data()
-        self.world_today_data()
+        self.province_total_data()
+        self.province_today_data()
 
 if __name__ == '__main__':
-    world_data= WorldData()
+    world_data= ProvinceData()
     world_data.main()
 
 

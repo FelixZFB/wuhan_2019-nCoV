@@ -19,7 +19,7 @@ class WorldData():
         self.all_data = self.ncovdata.get_html_text()
 
     def china_total_data(self):
-        # 累积数据汇总(实际该累积数据包含其它国家的数据)
+        # 累积数据汇总(实际该累积数据包含其它国家的数据),chinaTotal键对应的值就是累积数据
         chinaTotal = self.all_data['chinaTotal']
         print(chinaTotal)
         return chinaTotal

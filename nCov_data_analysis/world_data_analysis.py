@@ -20,6 +20,7 @@ class WorldData():
 
     def world_total_data(self):
         '''获取世界各国累积数据'''
+        # areaTree键对应的值就是各个国家的数据
         areaTree = self.all_data['areaTree']
         country_name = list()
         country_total_confirm = list()
