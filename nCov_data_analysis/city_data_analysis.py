@@ -6,7 +6,7 @@ Author: Felix
 WeiXin: AXiaShuBai
 Email: xiashubai@gmail.com
 Blog: https://blog.csdn.net/u011318077
-Date: 2020/1/30 21:15
+Date: 2020/1/30 22:11
 Desc:
 '''
 
@@ -59,5 +59,3 @@ class ProvinceData():
 if __name__ == '__main__':
     province_data= ProvinceData()
     province_data.main()
-
-
