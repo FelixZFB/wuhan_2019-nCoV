@@ -19,7 +19,7 @@ class ProvinceData():
         self.all_data = self.ncovdata.get_html_text()
 
     def province_total_data(self):
-        '''获取世界各国累积数据'''
+        '''获取各省的累积数据'''
         # areaTree对应的第一个数据就是中国，下面的children对应的就是每个省份的数据，是一个列表
         areaTree = self.all_data['areaTree'][0]['children']
         province_name = list()
@@ -37,7 +37,7 @@ class ProvinceData():
         print(province_total_confirm)
 
     def province_today_data(self):
-        '''获取各国今日数据'''
+        '''获取各省今日数据'''
         areaTree = self.all_data['areaTree'][0]['children']
         province_name = list()
         province_today_confirm = list()
