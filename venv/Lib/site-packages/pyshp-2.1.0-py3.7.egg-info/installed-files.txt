@@ -1,0 +1,7 @@
+..\__pycache__\shapefile.cpython-37.pyc
+..\shapefile.py
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+not-zip-safe
+top_level.txt

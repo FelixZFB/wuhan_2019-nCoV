@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: geos
+Version: 0.2.2
+Summary: Map server to view, measure and print maps in a web browserand to display maps as an overlay in google earth.
+Home-page: https://github.com/grst/geos
+Author: Gregor Sturm
+Author-email: mail@gregor-sturm.de
+License: GPLv3
+Keywords: maps,google earth,overlay,map printing
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: lxml
+Requires-Dist: pillow
+
+UNKNOWN
+
+

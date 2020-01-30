@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Google Earth Overlay Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" href="static/bootstrap/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="static/bootstrap/bootstrap-select.min.css" media="screen">
+    <link rel="stylesheet" href="static/openlayer/ol.css" type="text/css">
+    <link rel="stylesheet" href="static/custom.css" type="text/css">
+    <!--<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList"></script>-->
+    <script src="static/openlayer/ol.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse.parentMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">GEOS</a>
+        </div>
+
+        <div class="collapse navbar-collapse parentMenu">
+            <ul class="nav navbar-nav">
+                <li><a href="/kml-master.kml">Open in Google Earth (KML)</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Map<span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="maps"></ul>
+                </li>
+                <li><a data-toggle="collapse" data-target=".navbar-collapse-measure" id="measure">Measure</a></li>
+                <li><a data-toggle="collapse" data-target=".navbar-collapse-print">Print</a></li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse-measure childMenu">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="#">Measure: </a></li>
+                <form class="navbar-form navbar-left">
+                    <div class="btn-toolbar">
+                        <div class="btn-group" role="group" aria-label="..." id="measure-type-switch">
+                            <button type="button" data-value="line" class="btn btn-sm btn-default btn-active"
+                                    id="measure-distance">distance
+                            </button>
+                            <button type="button" data-value="area" class="btn btn-sm btn-default" id="measure-area">
+                                area
+                            </button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-default" id="measure-clear">clear</button>
+                        <button type="button" class="btn btn-sm btn-default btn-done" id="measure-done">done</button>
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse-print childMenu">
+            <ul class="nav navbar-nav">
+
+                <li><a class="navbar-brand" href="#">Print: </a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Paper Format<span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="print-size">
+                        <li class="active"><a href="#" data-width="297" data-height="210">A4 landscape</a></li>
+                        <li><a href="#" data-width="210" data-height="297">A4 portrait</a></li>
+                        <li><a href="#" data-width="420" data-height="297">A3 landscape</a></li>
+                        <li><a href="#" data-width="210" data-height="420">A3 portrait</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Zoom Level<span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="print-zoom">
+                    </ul>
+                </li>
+                <form class="navbar-form navbar-left">
+
+                    <li class="btn-toolbar">
+
+                        <button type="button" class="btn btn-default btn-sm " id="print-print">print</button>
+                        <button type="button" class="btn btn-default btn-sm btn-done" id="print-done">done</button>
+
+                    </li>
+                </form>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="map"></div>
+<script src="static/jquery/jquery-1.10.2.min.js"></script>
+<script src="static/bootstrap/bootstrap.min.js"></script>
+<script src="static/bootstrap/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="static/custom.js"></script>
+</body>
+</html>
