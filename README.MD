@@ -1,4 +1,11 @@
 #### 武汉2019新型冠状病毒疫情可视化(全国疫情地图及时间轴变化)
+- 项目结构
+    - nCoc_data_analysis
+        - 数据获取与分析提取
+    - china_shapfiles
+        - 地图基础数据       
+    - nCov_map_visualization    
+        - 疫情数据可视化，包含全国疫情地图、世界疫情地图、主要省份疫情地、图全国疫情随时间变化图
 
 #### 1. 数据来源
 - 数据来源，腾讯新闻：https://news.qq.com/zt2020/page/feiyan.htm
