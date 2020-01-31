@@ -9,6 +9,8 @@ Blog: https://blog.csdn.net/u011318077
 Date: 2020/1/30 22:11
 Desc:
 '''
+# 获取每个省份下各地级市详细数据，以湖北举例说明
+# 其它省份获取一样，若要全部获取，可以使用使用循环取出每一个省份，然后再取出每个省份下地级市的数据
 
 import a_get_html
 
@@ -19,11 +21,11 @@ class CityData():
         self.all_data = self.ncovdata.get_html_text()
 
     def hubei_total_data(self):
-        '''获取湖北省各城市累积数据'''
+        '''获取湖北省各地级市累积数据'''
         # areaTree对应的第一个数据就是中国，下面的children对应的就是每个省份的数据，
         # 第一个省份就是湖北省，湖北省下面的children就是每个地级市的数据，也是一个列表，列表里面是字典
         areaTree = self.all_data['areaTree'][0]['children'][0]['children']
-        print(areaTree)
+        # print(areaTree)
         city_name = list()
         city_total_confirm = list()
         city_total_suspect = list()
@@ -39,7 +41,7 @@ class CityData():
         print(city_total_confirm)
 
     def hubei_today_data(self):
-        '''获取各国今日数据'''
+        '''获取湖北省各地级市今日数据'''
         areaTree = self.all_data['areaTree'][0]['children']
         city_name = list()
         city_today_confirm = list()

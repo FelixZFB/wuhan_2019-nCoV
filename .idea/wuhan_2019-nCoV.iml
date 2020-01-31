@@ -5,6 +5,13 @@
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/nCov_data_analysis" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/china_shapfiles" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/china_shapfiles/gadm36_CHN_shp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/china_shapfiles/china-shapefiles-simple-version" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/china_shapfiles/gadm36_HKG_shp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/china_shapfiles/gadm36_MAC_shp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/china_shapfiles/gadm36_TWN_shp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nCov_basemap_visualization" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/basemap_matplotlib_使用案例" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />

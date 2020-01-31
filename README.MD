@@ -4,8 +4,8 @@
         - 数据获取与分析提取
     - china_shapfiles
         - 地图基础数据       
-    - nCov_map_visualization    
-        - 疫情数据可视化，包含全国疫情地图、世界疫情地图、主要省份疫情地、图全国疫情随时间变化图
+    - nCov_basemap_visualization    
+        - 疫情数据可视化，包含全国疫情地图、世界疫情地图、主要省份疫情地图、全国疫情随时间变化图
 
 #### 1. 数据来源
 - 数据来源，腾讯新闻：https://news.qq.com/zt2020/page/feiyan.htm
@@ -22,4 +22,5 @@
 - 中国截止目前累积数据、每日累积的数据(1月13日开始进行每日数据统计)
 
 #### 4. 数据可视化
-
+- 方式1：
+- 方式2：使用 basemap + matplotlib 
