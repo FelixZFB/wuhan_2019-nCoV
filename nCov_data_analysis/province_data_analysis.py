@@ -33,8 +33,9 @@ class ProvinceData():
             province_total_suspect.append(province['total']['suspect'])
             province_total_dead.append(province['total']['dead'])
             province_total_heal.append(province['total']['heal'])
-        print(province_name)
-        print(province_total_confirm)
+        # print(province_name)
+        # print(province_total_confirm)
+        return province_name, province_total_confirm
 
     def province_today_data(self):
         '''获取各省今日数据'''
@@ -50,7 +51,7 @@ class ProvinceData():
             province_today_suspect.append(province['today']['suspect'])
             province_today_dead.append(province['total']['dead'])
             province_today_heal.append(province['total']['heal'])
-        print(province_today_confirm)
+        # print(province_today_confirm)
 
     def main(self):
         self.province_total_data()
