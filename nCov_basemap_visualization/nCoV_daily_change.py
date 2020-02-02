@@ -30,10 +30,10 @@ def daily_change():
     ax1.plot(date_list, everyday_suspect, lw=2, ls='--', marker='o', color='orange', label='疑似')
     # 设置标题，XY轴标题，刻度
     ax1.set_title("2019-nCoV疫情变化时间图", fontsize=16)
-    ax1.set_xlabel("2020年1月", fontsize=16)
+    ax1.set_xlabel("2020年1-2月", fontsize=16)
     ax1.set_xticklabels(date_list, rotation=30)
     ax1.set_ylabel(r"确诊及疑似人数", fontsize=16)
-    ax1.set_ylim(0, 16000)
+    ax1.set_ylim(0, 20000)
     # 显示网格线和显示图例
     plt.grid(which='major', axis='both', color='grey', linestyle='--', alpha=0.2)
     plt.legend(loc='upper left', bbox_to_anchor=(0.3,1))
