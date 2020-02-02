@@ -50,16 +50,20 @@ def distribution_map():
     # 进行重新排序后的省份疫情表，省份排序与本地的经纬度表一致
     new_province_confirm= data_merge(province_dict, province_confirm_dict)
     confirm_list = np.array(list(new_province_confirm.values()))
+    # 计算每个省份确诊人数的比例，乘以一个值进行离散化数据
     size = (confirm_list/np.max(confirm_list))*3000
     print(confirm_list)
 
+    # 绘制经度纬度线
     parallels = np.arange(0., 90, 10.)
     map.drawparallels(parallels, labels=[1, 0, 0, 0], fontsize=10)  # 绘制纬线
     meridians = np.arange(80., 140., 10.)
     map.drawmeridians(meridians, labels=[0, 0, 0, 1], fontsize=10)  # 绘制经线
 
+    # 绘制疫情分布点，点的尺寸大小使用上面离散化后的尺寸
     x, y = map(lon_list, lat_list)
     map.scatter(x, y, s=size, c='red')
+
     # 设置数字标记
     for i in range(0, 34):
         plt.text(x[i] + 5000, y[i] + 5000, str(confirm_list[i]))

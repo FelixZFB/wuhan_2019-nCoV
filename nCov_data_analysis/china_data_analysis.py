@@ -42,7 +42,6 @@ class ChinaData():
         # print(everyday_confirm) # 中国累积确诊数据少于上面chinaTotal累积数据
         return date_list, everyday_confirm, everyday_suspect, everyday_dead, everyday_heal
 
-
     def main(self):
         self.china_total_data()
         self.china_everyday_data()
