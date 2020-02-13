@@ -9,7 +9,7 @@ Blog: https://blog.csdn.net/u011318077
 Date: 2020/1/31 17:18
 Desc:
 '''
-from province_data_analysis import ProvinceData
+from nCov_data_analysis.province_data_analysis import ProvinceData
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

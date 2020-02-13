@@ -10,7 +10,7 @@ Date: 2020/1/30 18:26
 Desc:
 '''
 
-import a_get_html
+from nCov_data_analysis import a_get_html
 
 class WorldData():
 

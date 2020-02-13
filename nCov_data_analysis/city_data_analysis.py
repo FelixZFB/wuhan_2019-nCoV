@@ -12,7 +12,7 @@ Desc:
 # 获取每个省份下各地级市详细数据，以湖北举例说明
 # 其它省份获取一样，若要全部获取，可以使用使用循环取出每一个省份，然后再取出每个省份下地级市的数据
 
-import a_get_html
+from nCov_data_analysis import a_get_html
 
 class CityData():
 

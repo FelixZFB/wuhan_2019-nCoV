@@ -26,9 +26,9 @@ class nCovData():
         res.encoding = 'utf-8'
         # 将获取到的json格式的字符串类型数据转换为python支持的字典类型数据
         data = json.loads(res.text)
-        # 所有的疫情数据，包括：中国累积数据、各国数据(中国里面包含各省及地级市详细数据)、中国每日累积数据(1月13日开始)
+        # 所有的疫情数据,data['data']数据还是str的json格式需要转换为字典格式，包括：中国累积数据、各国数据(中国里面包含各省及地级市详细数据)、中国每日累积数据(1月13日开始)
         all_data = json.loads(data['data'])
-        print(all_data)
+        # print(all_data)
         return all_data
 
 if __name__ == '__main__':
