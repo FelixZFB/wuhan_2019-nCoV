@@ -33,7 +33,7 @@ def daily_change():
     ax1.set_xlabel("2020年1-2月", fontsize=16)
     ax1.set_xticklabels(date_list, rotation=30)
     ax1.set_ylabel(r"确诊及疑似人数", fontsize=16)
-    ax1.set_ylim(0, 50000)
+    ax1.set_ylim(0, 80000)
     # 显示网格线和显示图例
     plt.grid(which='major', axis='both', color='grey', linestyle='--', alpha=0.2)
     plt.legend(loc='upper left', bbox_to_anchor=(0.3,1))
@@ -44,7 +44,7 @@ def daily_change():
     ax2.plot(date_list, everyday_heal, lw=1, ls='--', marker='.', color='green', label='治愈')
     # 设置标题刻度
     ax2.set_ylabel(r"死亡及治愈人数", fontsize=16)
-    ax2.set_ylim(0, 400)
+    ax2.set_ylim(0, 8000)
     # 显示网格线和显示图例
     plt.grid(which='major', axis='both', color='grey', linestyle='--', alpha=0.2)
     plt.legend(loc='upper center')
