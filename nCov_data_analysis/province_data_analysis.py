@@ -53,7 +53,7 @@ class ProvinceData():
         for province in areaTree:
             province_name.append(province['name'])
             province_today_confirm.append(province['today']['confirm'])
-            province_today_suspect.append(province['today']['suspect'])
+            # province_today_suspect.append(province['today']['suspect'])  # 目前疑似病例数据已经没了可以注销该栏
             province_today_dead.append(province['total']['dead'])
             province_today_heal.append(province['total']['heal'])
         # print(province_today_confirm)
@@ -63,7 +63,7 @@ class ProvinceData():
         self.province_today_data()
 
 if __name__ == '__main__':
-    province_data= ProvinceData()
+    province_data = ProvinceData()
     province_data.main()
 
 
